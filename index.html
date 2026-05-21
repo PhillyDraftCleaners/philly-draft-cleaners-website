@@ -972,7 +972,165 @@
       </div>
     </div>
   </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bacterial Growth in Draught Beer</title>
+<style>
+  body { margin: 0; padding: 1.5rem; font-family: system-ui, sans-serif; background: #fff; color: #111; }
+  @media (prefers-color-scheme: dark) { body { background: #1a1a1a; color: #eee; } }
+  .chart-wrap { max-width: 800px; margin: 0 auto; }
+  .eyebrow { font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: #666; margin: 0 0 4px; }
+  .chart-title { font-size: 20px; font-weight: 500; margin: 0 0 4px; }
+  .chart-sub { font-size: 13px; color: #666; margin: 0 0 1.25rem; }
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 1rem; font-size: 12px; color: #666; align-items: center; }
+  .legend-area { width: 28px; height: 12px; border-radius: 2px; background: #5b9bd5; opacity: 0.75; display: inline-block; }
+  .legend-line { width: 18px; height: 2px; border-top: 2.5px solid #8B6914; display: inline-block; }
+  .legend-dash { width: 18px; height: 2px; border-top: 2.5px dashed #555; display: inline-block; }
+  .legend span { display: flex; align-items: center; gap: 6px; }
+  .callout { margin-top: 0.75rem; padding: 10px 14px; background: #f5f5f5; border-left: 3px solid #5b9bd5; }
+  @media (prefers-color-scheme: dark) { .callout { background: #2a2a2a; } }
+  .callout p { margin: 0; font-size: 12px; color: #666; }
+  .callout strong { color: #111; }
+  @media (prefers-color-scheme: dark) { .callout strong { color: #eee; } }
+  .source { margin: 1rem 0 0; font-size: 11px; color: #888; }
+  .canvas-wrap { position: relative; width: 100%; height: 340px; }
+  @media (max-width: 480px) { .canvas-wrap { height: 260px; } }
+</style>
+</head>
+<body>
+<div class="chart-wrap">
+  <p class="eyebrow">Cleaning &amp; Maintenance</p>
+  <p class="chart-title">Bacterial Growth in Draught Beer</p>
+  <p class="chart-sub">Colony forming units over time in uncleaned draught lines</p>
 
+  <div class="legend">
+    <span><span class="legend-area"></span>Total CFUs (colony forming units)</span>
+    <span><span class="legend-line"></span>Aerobic bacteria — sour &amp; vinegar off-flavors</span>
+    <span><span class="legend-dash"></span>Anaerobic bacteria — butter &amp; caramel off-flavors</span>
+  </div>
+
+  <div class="canvas-wrap">
+    <canvas id="beerChart" role="img" aria-label="Line and area chart showing bacterial growth in draught beer from day 1 to day 28.">Total CFUs: day1=5.1, day3=5.9, day7=7.8, day14=7.8, day21=10.5, day28=11.0.</canvas>
+  </div>
+
+  <div class="callout">
+    <p><strong>Brewers Association:</strong> 14-day cleaning frequency recommended to prevent exponential bacterial growth.</p>
+  </div>
+
+  <p class="source">Figure 18. Adapted from E. Storgårds, "Microbiological Quality of Draught Beer — Is There Reason for Concern?" <em>Proceedings of the European Brewing Convention Symposium Draught Beer, Packaging and Dispense</em>, EBC Monograph vol. 25. Nürnberg: Fachverlag Hans Carl, 92–103.</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const labels = ['1 day', '3 days', '7 days', '14 days', '21 days', '28 days'];
+const totalCFUs = [5.1, 5.9, 7.8, 7.8, 10.5, 11.0];
+const aerobic = [2.95, 2.98, 5.35, 5.05, 6.9, 6.05];
+const anaerobic = [2.35, 2.9, 2.9, 3.05, 3.55, 5.0];
+const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+
+new Chart(document.getElementById('beerChart'), {
+  type: 'line',
+  data: {
+    labels,
+    datasets: [
+      {
+        label: 'Total CFUs',
+        data: totalCFUs,
+        fill: true,
+        backgroundColor: 'rgba(91,155,213,0.22)',
+        borderColor: '#5b9bd5',
+        borderWidth: 2,
+        pointRadius: 3,
+        pointBackgroundColor: '#5b9bd5',
+        tension: 0.35,
+        yAxisID: 'yLeft'
+      },
+      {
+        label: 'Aerobic bacteria',
+        data: aerobic,
+        fill: false,
+        borderColor: '#8B6914',
+        borderWidth: 2.5,
+        pointRadius: 4,
+        pointStyle: 'circle',
+        pointBackgroundColor: '#8B6914',
+        tension: 0.3,
+        yAxisID: 'yRight'
+      },
+      {
+        label: 'Anaerobic bacteria',
+        data: anaerobic,
+        fill: false,
+        borderColor: isDark ? '#aaa' : '#333',
+        borderWidth: 2,
+        borderDash: [5, 4],
+        pointRadius: 4,
+        pointStyle: 'rectRot',
+        pointBackgroundColor: isDark ? '#aaa' : '#333',
+        tension: 0.3,
+        yAxisID: 'yRight'
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        mode: 'index',
+        intersect: false,
+        callbacks: {
+          label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y.toFixed(2)}`
+        }
+      }
+    },
+    scales: {
+      x: {
+        grid: { color: isDark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.06)' },
+        ticks: { color: isDark ? '#aaa' : '#555', font: { size: 12 } }
+      },
+      yLeft: {
+        position: 'left',
+        min: 5,
+        max: 11,
+        title: { display: true, text: 'Total CFUs', color: isDark ? '#aaa' : '#555', font: { size: 11 } },
+        ticks: { color: isDark ? '#aaa' : '#555', font: { size: 11 }, stepSize: 1, callback: v => v.toFixed(2) },
+        grid: { color: isDark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.06)' }
+      },
+      yRight: {
+        position: 'right',
+        min: 2.0,
+        max: 7.0,
+        title: { display: true, text: 'CFUs — Aerobic & Anaerobic bacteria', color: isDark ? '#aaa' : '#555', font: { size: 11 } },
+        ticks: { color: isDark ? '#aaa' : '#555', font: { size: 11 }, stepSize: 0.5, callback: v => v.toFixed(2) },
+        grid: { drawOnChartArea: false }
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>
+  <section class="beer-science-section">
+  <h2 style="font-family: 'Inter', sans-serif; font-weight: 700; color: #1C1C1C; margin-bottom: 12px;">The Technical Breakdown</h2>
+  <p style="font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; color: #1C1C1C; margin-top: 0; margin-bottom: 24px;">
+    From a microbiological perspective, draft beer lines act as a dynamic bioreactor when left unmaintained. As illustrated by the Storgårds data, bacterial propagation follows an exponential growth phase. In the first 14 days, sessile bacteria begin colonizing the internal surface of the draught tubing, establishing a foundational biofilm. Post-day 14, the microbial load surges dramatically. The proliferation of <em>aerobic bacteria</em> drastically spikes total Colony Forming Units (CFUs), synthesizing acetic acid and shifting the pH to yield sour, vinegar-like off-flavors. Concurrently, <em>anaerobic bacteria</em> multiply within the deeper layers of the biofilm, secreting metabolic byproducts like diacetyl, which introduce undesirable butter and caramel notes that compromise the beverage's intended organoleptic profile.
+  </p>
+
+  <hr style="border: 0; border-top: 1px solid #D4820A; margin-bottom: 24px;" />
+
+  <h3 style="font-family: 'Inter', sans-serif; font-weight: 600; color: #D4820A; margin-bottom: 12px;">So, what does this actually mean for your bar?</h3>
+  <p style="font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; color: #1C1C1C; margin-top: 0; margin-bottom: 16px;">
+    <strong>The short answer:</strong> If you don't clean your beer lines every two weeks, your beer is going to taste terrible, and you're going to lose money.
+  </p>
+  <p style="font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; color: #1C1C1C; margin-top: 0; margin-bottom: 0;">
+    For the first few days after a cleaning, the lines stay relatively clean. But right around the <strong>14-day mark</strong>, the bacteria inside the lines hit a massive growth spurt. If you cross that 14-day threshold without a professional flush, those microbes take over and start pumping out nasty chemical byproducts. Your crisp IPAs will start tasting like vinegar, and your stouts will taste like movie theater popcorn butter. Regular, 14-day cleaning cycles stop this bacteria spike before it ever starts, ensuring every pint pours exactly how the brewer intended.
+  </p>
+</section>
   <!-- ═══ SERVICES ══════════════════════════════════ -->
   <section class="services">
     <div class="services-head">
