@@ -28,7 +28,7 @@
   --black:#1C1C1C;--gold:#F0B429;--amber:#D4820A;--cream:#F0EAD6;
   --white:#ffffff;--near-white:#F7F6F2;--g1:#F0EDE5;--g2:#E2DDD4;--g3:#B8B0A0;--g4:#6B6457;
   --fd:'Barlow Condensed',sans-serif;--fb:'Barlow',sans-serif;
-  --max:1140px;--nav:80px;
+  --max:1140px;--nav:90px;
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:var(--fb);font-size:16px;line-height:1.65;color:var(--black);background:var(--near-white);-webkit-font-smoothing:antialiased}
@@ -59,7 +59,7 @@ section.alt{background:var(--white)}
 /* NAV */
 .site-nav{position:sticky;top:0;z-index:200;height:var(--nav);background:var(--white);border-bottom:2px solid var(--g2)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:var(--nav);max-width:var(--max);margin:0 auto;padding:0 40px}
-.nav-logo img{height:58px;width:auto}
+.nav-logo img{height:76px;width:auto}
 .nav-links{display:flex;align-items:center;gap:28px}
 .nav-links a{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g4);transition:color .15s}
 .nav-links a:hover{color:var(--amber)}
@@ -77,7 +77,7 @@ section.alt{background:var(--white)}
 .nav-mob a:hover{color:var(--amber)}
 .nav-mob .btn{margin-top:28px;text-align:center}
 .nav-mob-phone{font-size:15px;color:var(--g3);text-align:center;margin-top:14px}
-@media(max-width:960px){.nav-links,.nav-right{display:none}.nav-tog{display:flex}.nav-inner{padding:0 20px}}
+@media(max-width:960px){.nav-links,.nav-right{display:none}.nav-tog{display:flex}.nav-inner{padding:0 20px}.nav-logo img{height:58px;width:auto}}
 
 /* HERO */
 .hero{position:relative;min-height:88vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding:0}
