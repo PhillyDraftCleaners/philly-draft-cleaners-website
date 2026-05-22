@@ -8,12 +8,6 @@
   status = 301
   force  = true
 
-# Trailing slash normalization — strip trailing slash
-[[redirects]]
-  from   = "/*/"
-  to     = "/:splat"
-  status = 301
-
 # Cache static assets for 1 year
 [[headers]]
   for = "/assets/*"
