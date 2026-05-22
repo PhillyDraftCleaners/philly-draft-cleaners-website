@@ -1,0 +1,32 @@
+/* ============================================================
+   interior.css — Shared styles for all inner pages
+   ============================================================ */
+
+/* ABOUT pillars */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--g2);border:1px solid var(--g2)}
+.pillar{background:var(--white);padding:36px 28px}
+.pillar-num{font-family:var(--f);font-size:48px;font-weight:900;color:var(--g2);line-height:1;margin-bottom:-4px}
+.pillar h3{font-size:20px;margin:8px 0 12px}
+.pillar p{font-size:15px;color:var(--g4);line-height:1.65}
+@media(max-width:768px){.pillars{grid-template-columns:1fr}}
+
+/* SERVICES detail layout */
+.svc-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.svc-detail-grid-rev{direction:rtl}.svc-detail-grid-rev>*{direction:ltr}
+.svc-detail-text h2{margin-bottom:8px}
+.svc-mandate{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:18px}
+.svc-detail-text p{font-size:16px;color:var(--g4);line-height:1.7}
+
+/* PROCESS steps (services page has 8) */
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--g2);border:1px solid var(--g2);margin-top:48px}
+.proc-item{background:var(--white);padding:32px 28px}
+.proc-num{font-family:var(--f);font-size:52px;font-weight:900;color:var(--g2);line-height:1;margin-bottom:-4px}
+.proc-item h4{font-family:var(--f);font-size:16px;font-weight:700;text-transform:uppercase;margin:6px 0 8px}
+.proc-item p{font-size:14px;color:var(--g4);line-height:1.6}
+
+@media(max-width:900px){
+  .svc-detail-grid{grid-template-columns:1fr;gap:40px}
+  .svc-detail-grid-rev{direction:ltr}
+  .process-steps{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){.process-steps{grid-template-columns:1fr}}

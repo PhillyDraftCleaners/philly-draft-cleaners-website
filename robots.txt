@@ -1,0 +1,212 @@
+# robots.txt — phillydraftcleaners.com
+# Last updated: 2026
+
+# -------------------------------------------------------
+# ALLOWED: Major search engines
+# -------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# -------------------------------------------------------
+# ALLOWED: Major LLM / AI crawlers
+# -------------------------------------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# -------------------------------------------------------
+# BLOCKED: Scrapers, spam bots, ad bots, data harvesters
+# -------------------------------------------------------
+
+# Generic aggressive scrapers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: serpstatbot
+Disallow: /
+
+User-agent: SEOkicks
+Disallow: /
+
+User-agent: Seekport
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+# Ad intelligence / email harvesting bots
+User-agent: adbeat_bot
+Disallow: /
+
+User-agent: meanpathbot
+Disallow: /
+
+User-agent: Mail.RU_Bot
+Disallow: /
+
+User-agent: SiteExplorer
+Disallow: /
+
+User-agent: spbot
+Disallow: /
+
+User-agent: Harvest
+Disallow: /
+
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: EmailSiphon
+Disallow: /
+
+User-agent: WebEmailExtract
+Disallow: /
+
+User-agent: EmailWolf
+Disallow: /
+
+# Known Russian / Eastern European aggressive bots
+User-agent: Aboundex
+Disallow: /
+
+User-agent: rogerbot
+Disallow: /
+
+User-agent: 360Spider
+Disallow: /
+
+User-agent: GrapeshotCrawler
+Disallow: /
+
+User-agent: SputnikBot
+Disallow: /
+
+User-agent: proximic
+Disallow: /
+
+# Vulnerability scanners and spam tools
+User-agent: Nikto
+Disallow: /
+
+User-agent: sqlmap
+Disallow: /
+
+User-agent: masscan
+Disallow: /
+
+User-agent: ZmEu
+Disallow: /
+
+User-agent: Morfeus
+Disallow: /
+
+# Content theft / mirror bots
+User-agent: HTTrack
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: WebReaper
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+User-agent: SiteSnagger
+Disallow: /
+
+User-agent: TeleportPro
+Disallow: /
+
+User-agent: Offline Explorer
+Disallow: /
+
+User-agent: Wget
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+# -------------------------------------------------------
+# DEFAULT: Everything else gets full access
+# -------------------------------------------------------
+User-agent: *
+Allow: /
+Crawl-delay: 10
+
+# -------------------------------------------------------
+# Sitemap
+# -------------------------------------------------------
+Sitemap: https://phillydraftcleaners.com/sitemap.xml
