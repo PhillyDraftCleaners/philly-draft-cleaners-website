@@ -76,3 +76,6 @@
   .benefits-grid{grid-template-columns:1fr}
   .process-steps{grid-template-columns:1fr}
 }
+@media(max-width:768px){
+  #hero-bg{background-image:url('/assets/images/hero-mobile.webp');background-position:center center;}
+}
