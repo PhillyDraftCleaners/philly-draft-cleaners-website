@@ -83,4 +83,7 @@
 }
 @media(max-width:768px){
   #hero-bg{background-image:url('/assets/images/hero-mobile.webp');background-position:center top;}
+  .hero-body h1{text-align:center;}
+  .hero-sub{text-align:center;}
+  .hero-ctas{justify-content:center;}
 }
