@@ -82,5 +82,5 @@
   background-position:center 20%;
 }
 @media(max-width:768px){
-  #hero-bg{background-image:url('/assets/images/hero-mobile.webp');background-position:right bottom;}
+  #hero-bg{background-image:url('/assets/images/hero-mobile.webp');background-position:center top;}
 }
