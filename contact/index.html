@@ -16,36 +16,156 @@
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M5CSSZMM');</script>
 <!-- End Google Tag Manager -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","mainEntity":{"@type":"LocalBusiness","name":"Philly Draft Cleaners","contactPoint":{"@type":"ContactPoint","contactType":"customer service","email":"mike@phillydraftcleaners.com","telephone":"+1-267-282-1002","areaServed":"Philadelphia Region"},"areaServed":["Philadelphia","Center City","Fishtown","Northern Liberties","South Philly","Old City"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","mainEntity":{"@type":"LocalBusiness","name":"Philly Draft Cleaners","contactPoint":{"@type":"ContactPoint","contactType":"customer service","email":"mike@phillydraftcleaners.com","telephone":"+1-267-282-1002","areaServed":"Philadelphia Region"}}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
 <link rel="stylesheet" href="/assets/css/style.css">
-<link rel="stylesheet" href="/assets/css/interior.css">
+<link rel="stylesheet" href="/assets/css/home.css">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <style>
-.contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:72px;align-items:start}
-.contact-form-wrap{background:var(--white);border:1px solid var(--g2);padding:40px}
-.contact-form-wrap h3{font-size:22px;margin-bottom:8px}
-.contact-form-wrap>p{font-size:15px;color:var(--g4);margin-bottom:28px}
-.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
-.form-group label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g4)}
-.form-group input,.form-group textarea,.form-group select{
-  font-family:var(--f);font-size:15px;color:var(--black);
-  background:var(--nw);border:1px solid var(--g2);padding:12px 14px;
-  transition:border-color .15s;outline:none;width:100%;
+/* Contact page layout */
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 72px;
+  align-items: start;
+  padding-top: 0;
 }
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--amber)}
-.form-group textarea{resize:vertical;min-height:120px}
-.form-note{font-size:12px;color:var(--g3);margin-top:8px}
-.contact-info h3{font-size:22px;margin-bottom:24px}
-.contact-info-item{display:flex;flex-direction:column;gap:4px;padding:20px 0;border-bottom:1px solid var(--g2)}
-.contact-info-item:last-child{border-bottom:none}
-.contact-info-item strong{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
-.contact-info-item a,.contact-info-item span{font-size:16px;color:var(--black);transition:color .15s}
-.contact-info-item a:hover{color:var(--amber)}
-.service-area-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-.service-area-tag{font-size:12px;background:var(--g1);color:var(--g4);padding:4px 10px;font-weight:600}
-@media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:48px}}
+
+/* Form card */
+.contact-form-wrap {
+  background: var(--white);
+  border: 1px solid var(--g2);
+  padding: 40px;
+}
+.contact-form-wrap h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+.contact-form-wrap > p {
+  font-size: 15px;
+  color: var(--g4);
+  margin-bottom: 28px;
+}
+
+/* Form fields */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.form-group label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--g4);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.req {
+  color: #d0352b;
+  font-size: 13px;
+  line-height: 1;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  font-family: var(--f);
+  font-size: 15px;
+  color: var(--black);
+  background: var(--nw);
+  border: 1px solid var(--g2);
+  padding: 12px 14px;
+  transition: border-color .15s;
+  outline: none;
+  width: 100%;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--amber);
+}
+.form-group input.field-error,
+.form-group textarea.field-error,
+.form-group select.field-error {
+  border-color: #d0352b;
+  background: #fff8f8;
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.field-error-msg {
+  font-size: 12px;
+  color: #d0352b;
+  font-weight: 600;
+  display: none;
+  margin-top: 2px;
+}
+.field-error-msg.visible {
+  display: block;
+}
+.form-note {
+  font-size: 12px;
+  color: var(--g3);
+  margin-top: 12px;
+}
+
+/* Right column — contact info only */
+.contact-info h3 {
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+.contact-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--g2);
+}
+.contact-info-item:first-child {
+  padding-top: 0;
+}
+.contact-info-item:last-child {
+  border-bottom: none;
+}
+.contact-info-item strong {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+.contact-info-item a,
+.contact-info-item span {
+  font-size: 16px;
+  color: var(--black);
+  transition: color .15s;
+}
+.contact-info-item a:hover {
+  color: var(--amber);
+}
+
+/* Shrink hero padding so form is higher on page */
+.page-hero {
+  padding: 48px 0 40px;
+}
+
+@media (max-width: 900px) {
+  .contact-wrap {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  /* On mobile show form first, info second */
+  .contact-form-wrap { order: 1; }
+  .contact-info     { order: 2; }
+}
 </style>
 </head>
 <body>
@@ -60,7 +180,7 @@
     <div class="nav-links">
       <a href="https://phillydraftcleaners.com/about">About</a>
       <a href="https://phillydraftcleaners.com/services">Services</a>
-      <a href="https://phillydraftcleaners.com/contact">Contact</a>
+      <a href="https://phillydraftcleaners.com/contact" class="active">Contact</a>
       <a href="https://phillydraftcleaners.com/blog">Blog</a>
     </div>
     <div class="nav-right">
@@ -86,36 +206,45 @@
   <div class="wrap">
     <p class="eyebrow">Get your free price quote</p>
     <h1>Contact <em>Us</em></h1>
-    <p>Pricing for alkaline or acid cleaning is based on several variables including number of taps, length of line, beer system, and the setup of the walk in, bar, tap tower and more. Submit the form to get started.</p>
+    <p>Pricing is based on your number of taps, line length, and system setup. Fill out the form and we'll get back to you within one business day.</p>
   </div>
 </section>
 
 <section class="sec-w divide">
   <div class="wrap">
-    <div class="contact-grid">
+    <div class="contact-wrap">
+
+      <!-- FORM -->
       <div class="contact-form-wrap">
         <h3>Send Us a Message</h3>
         <p>Fill out the form and we'll get back to you within one business day.</p>
-        <!-- Netlify Forms: add data-netlify="true" to the form tag when deploying -->
-<form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true"></form>
+        <form id="contact-form" name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
           <input type="hidden" name="form-name" value="contact">
           <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+
           <div class="form-group">
-            <label for="name">Your Name</label>
+            <label for="name">Your Name <span class="req" aria-hidden="true">*</span></label>
             <input type="text" id="name" name="name" placeholder="First Last" required>
+            <span class="field-error-msg" id="name-error">Please enter your name.</span>
           </div>
+
           <div class="form-group">
-            <label for="business">Business Name</label>
+            <label for="business">Business Name <span class="req" aria-hidden="true">*</span></label>
             <input type="text" id="business" name="business" placeholder="The Tap Room" required>
+            <span class="field-error-msg" id="business-error">Please enter your business name.</span>
           </div>
+
           <div class="form-group">
-            <label for="email">Email Address</label>
+            <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
             <input type="email" id="email" name="email" placeholder="jane@yourbusiness.com" required>
+            <span class="field-error-msg" id="email-error">Please enter a valid email address.</span>
           </div>
+
           <div class="form-group">
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" placeholder="(215) 555-0100">
           </div>
+
           <div class="form-group">
             <label for="taps">Number of Taps (approximate)</label>
             <select id="taps" name="taps">
@@ -127,33 +256,44 @@
               <option value="unsure">Not sure</option>
             </select>
           </div>
+
           <div class="form-group">
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Tell us about your setup, questions, or how we can help..."></textarea>
-          </div><div data-netlify-recaptcha="true"></div>
-          <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center">Send Message</button>
-          <p class="form-note">We typically respond within one business day. For faster service, call us directly at (267) 282-1002.</p>
+          </div>
+
+          <div data-netlify-recaptcha="true" style="margin-bottom:20px"></div>
+
+          <button type="submit" class="btn btn-gold" style="width:100%">Send Message</button>
+          <p class="form-note">We typically respond within one business day. For faster service, call us directly at <a href="tel:2672821002">(267) 282-1002</a>.</p>
         </form>
       </div>
 
-          <strong>Service Area</strong>
-          <span>Serving Philadelphia and the surrounding areas</span>
-          <div class="service-area-list">
-            <span class="service-area-tag">Center City</span>
-            <span class="service-area-tag">Fishtown</span>
-            <span class="service-area-tag">Northern Liberties</span>
-            <span class="service-area-tag">South Philly</span>
-            <span class="service-area-tag">Old City</span>
-            <span class="service-area-tag">Manayunk</span>
-            <span class="service-area-tag">Kensington</span>
-            <span class="service-area-tag">And beyond</span>
-          </div>
+      <!-- CONTACT INFO -->
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <div class="contact-info-item">
+          <strong>Phone</strong>
+          <a href="tel:2672821002">(267) 282-1002</a>
+        </div>
+        <div class="contact-info-item">
+          <strong>Email</strong>
+          <a href="mailto:mike@phillydraftcleaners.com">mike@phillydraftcleaners.com</a>
+        </div>
+        <div class="contact-info-item">
+          <strong>Location</strong>
+          <span>Philadelphia, PA</span>
         </div>
         <div class="contact-info-item">
           <strong>Free On-Site Estimate</strong>
           <span>We come to you. No charge, no obligation. We assess your system and provide a custom quote based on your number of taps and line length.</span>
         </div>
+        <div class="contact-info-item">
+          <strong>Response Time</strong>
+          <span>We typically respond within one business day. For faster service, call us directly.</span>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -202,5 +342,55 @@
   </div>
 </footer>
 <script src="/assets/js/main.js" defer></script>
+<script>
+(function(){
+  var form = document.getElementById('contact-form');
+  if(!form) return;
+
+  function validateField(input) {
+    var id = input.id;
+    var errEl = document.getElementById(id + '-error');
+    if(!errEl) return true;
+    var valid = true;
+
+    if(input.hasAttribute('required') && !input.value.trim()) {
+      valid = false;
+    } else if(id === 'email' && input.value.trim()) {
+      valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
+    }
+
+    if(!valid) {
+      input.classList.add('field-error');
+      errEl.classList.add('visible');
+    } else {
+      input.classList.remove('field-error');
+      errEl.classList.remove('visible');
+    }
+    return valid;
+  }
+
+  // Live validation on blur
+  ['name','business','email'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.addEventListener('blur', function(){ validateField(el); });
+    if(el) el.addEventListener('input', function(){ if(el.classList.contains('field-error')) validateField(el); });
+  });
+
+  // On submit
+  form.addEventListener('submit', function(e){
+    var allValid = true;
+    ['name','business','email'].forEach(function(id){
+      var el = document.getElementById(id);
+      if(el && !validateField(el)) allValid = false;
+    });
+    if(!allValid) {
+      e.preventDefault();
+      // Scroll to first error
+      var first = form.querySelector('.field-error');
+      if(first) first.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+  });
+})();
+</script>
 </body>
 </html>
