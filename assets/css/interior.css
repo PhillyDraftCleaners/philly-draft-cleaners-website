@@ -1,32 +1,253 @@
-/* ============================================================
-   interior.css — Shared styles for all inner pages
-   ============================================================ */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Draft Beer Blog | Tips &amp; Insights | Philly Draft Cleaners</title>
+<meta name="description" content="Draft beer tips, line cleaning insights, and troubleshooting guides from Philly Draft Cleaners — Philadelphia's certified draft beer specialists.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://phillydraftcleaners.com/blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Draft Beer Blog | Philly Draft Cleaners">
+<meta property="og:description" content="Draft beer tips, line cleaning insights, and troubleshooting guides from Philly Draft Cleaners.">
+<meta property="og:url" content="https://phillydraftcleaners.com/blog">
+<meta property="og:site_name" content="Philly Draft Cleaners">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M5CSSZMM');</script>
+<!-- End Google Tag Manager -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/home.css">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<style>
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--g2);border:1px solid var(--g2);margin-top:48px}
+a.blog-card{background:var(--white);padding:32px 28px;display:flex;flex-direction:column;gap:12px;transition:background .15s;text-decoration:none}
+a.blog-card:hover{background:var(--g1)}
+.blog-cat{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+.blog-date{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--g3)}
+.blog-card h3{font-size:19px;color:var(--black);transition:color .15s;line-height:1.25;margin:0}
+a.blog-card:hover h3{color:var(--amber)}
+.blog-card p{font-size:14px;color:var(--g4);line-height:1.6;flex:1;margin:0}
+.blog-card-link{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-top:auto}
+.blog-meta{display:flex;align-items:center;gap:8px}
+.blog-meta-dot{color:var(--g3);font-size:10px}
+@media(max-width:900px){.blog-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.blog-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5CSSZMM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav class="site-nav" id="site-nav">
+  <div class="nav-inner">
+    <a href="https://phillydraftcleaners.com" class="nav-logo" aria-label="Philly Draft Cleaners Home">
+      <img src="/assets/brand/logo.png" alt="Philly Draft Cleaners" height="90">
+    </a>
+    <div class="nav-links">
+      <a href="https://phillydraftcleaners.com/about">About</a>
+      <a href="https://phillydraftcleaners.com/services">Services</a>
+      <a href="https://phillydraftcleaners.com/contact">Contact</a>
+      <a href="https://phillydraftcleaners.com/faq">FAQ</a>
+      <a href="https://phillydraftcleaners.com/blog">Blog</a>
+    </div>
+    <div class="nav-right">
+      <a href="tel:2672821002" class="nav-phone">(267) 282-1002</a>
+      <a href="https://phillydraftcleaners.com/contact" class="btn btn-gold">Get a Free Quote</a>
+    </div>
+    <button class="nav-tog" id="nav-tog" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mob" id="nav-mob">
+  <a href="https://phillydraftcleaners.com/about">About</a>
+  <a href="https://phillydraftcleaners.com/services">Services</a>
+  <a href="https://phillydraftcleaners.com/contact">Contact</a>
+  <a href="https://phillydraftcleaners.com/faq">FAQ</a>
+  <a href="https://phillydraftcleaners.com/blog">Blog</a>
+  <a href="https://phillydraftcleaners.com/contact" class="btn btn-gold">Get a Free Quote</a>
+  <p class="nav-mob-phone"><a href="tel:2672821002">(267) 282-1002</a></p>
+</div>
+<main>
 
-/* ABOUT pillars */
-.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--g2);border:1px solid var(--g2)}
-.pillar{background:var(--white);padding:36px 28px}
-.pillar-num{font-family:var(--f);font-size:48px;font-weight:900;color:var(--g2);line-height:1;margin-bottom:-4px}
-.pillar h3{font-size:20px;margin:8px 0 12px}
-.pillar p{font-size:15px;color:var(--g4);line-height:1.65}
-@media(max-width:768px){.pillars{grid-template-columns:1fr}}
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">From the field</p>
+    <h1>Draft Beer <em>Blog</em></h1>
+    <p>Tips, insights, and troubleshooting guides for bar owners, taproom managers, and anyone who pours draft beer professionally.</p>
+  </div>
+</section>
 
-/* SERVICES detail layout */
-.svc-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.svc-detail-grid-rev{direction:rtl}.svc-detail-grid-rev>*{direction:ltr}
-.svc-detail-text h2{margin-bottom:8px}
-.svc-mandate{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:18px}
-.svc-detail-text p{font-size:16px;color:var(--g4);line-height:1.7}
+<section class="sec-w divide">
+  <div class="wrap">
+    <p class="eyebrow">Latest posts</p>
+    <h2>All Articles</h2>
+    <div class="blog-grid">
 
-/* PROCESS steps (services page has 8) */
-.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--g2);border:1px solid var(--g2);margin-top:48px}
-.proc-item{background:var(--white);padding:32px 28px}
-.proc-num{font-family:var(--f);font-size:52px;font-weight:900;color:var(--g2);line-height:1;margin-bottom:-4px}
-.proc-item h4{font-family:var(--f);font-size:16px;font-weight:700;text-transform:uppercase;margin:6px 0 8px}
-.proc-item p{font-size:14px;color:var(--g4);line-height:1.6}
+      <a href="/blog/why-is-my-draft-beer-flat.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Beer Quality</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>Why Is My Draft Beer Flat?</h3>
+        <p>Flat beer is a solvable problem. Here's how to work through the most common causes — from CO₂ pressure to dirty lines — and fix it fast.</p>
+        <span class="blog-card-link">Read More →</span>
+      </a>
 
-@media(max-width:900px){
-  .svc-detail-grid{grid-template-columns:1fr;gap:40px}
-  .svc-detail-grid-rev{direction:ltr}
-  .process-steps{grid-template-columns:1fr 1fr}
-}
-@media(max-width:560px){.process-steps{grid-template-columns:1fr}}
+      <a href="/blog/why-draft-beer-lines-need-cleaning-every-two-weeks.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Line Cleaning</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>Why Do Draft Beer Lines Need to Be Cleaned Every 2 Weeks?</h3>
+        <p>It's not arbitrary. Yeast, bacteria, and mold build up fast. Here's what the Brewers Association says — and what Pennsylvania law requires.</p>
+        <span class="blog-card-link">Read More →</span>
+      </a>
+
+      <a href="/blog/alkaline-vs-acid-draft-beer-line-cleaning.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Line Cleaning</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>Alkaline vs. Acid Line Cleaning: What's the Difference?</h3>
+        <p>Your bi-weekly caustic clean handles bacteria. But it does nothing for beer stone. Here's why both cleaners are necessary and what each one does.</p>
+        <span class="blog-card-link">Read More →</span>
+      </a>
+
+      <a href="/blog/off-taste-in-draft-beer.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Beer Quality</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>What's That Off-Taste in My Draft Beer?</h3>
+        <p>Butterscotch, vinegar, metal — each off-flavor has a cause. Most of them trace back to the same place: your draft lines.</p>
+        <span class="blog-card-link">Read More →</span>
+      </a>
+
+      <a href="/blog/pennsylvania-draft-beer-line-cleaning-law.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Regulations</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>Pennsylvania Draft Beer Line Cleaning Law: What Every Bar Owner Needs to Know</h3>
+        <p>Pennsylvania law requires cleaning every 14 days. Here's exactly what 40 Pa. Code § 5.51 says, who enforces it, and what happens if you don't comply.</p>
+        <span class="blog-card-link">Read More →</span>
+      </a>
+
+      <a href="/blog/what-is-beer-stone-draft-lines.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Line Cleaning</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>What Is Beer Stone and Why Does It Ruin Your Draft Lines?</h3>
+        <p>Beer stone is calcium oxalate — a mineral deposit that builds up inside your lines and can't be removed with a standard caustic clean.</p>
+        <span class="blog-card-link">Read More →</span>
+      </a>
+
+      <a href="/blog/biofilm-in-draft-beer-lines.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Beer Quality</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>The Science of Biofilm in Draft Beer Lines</h3>
+        <p>A 2021 NIH study found over 100 bacterial species in retail draft lines. Here's what biofilm is, how it forms, and why it matters for your pour.</p>
+        <span class="blog-card-link">Read More →</span>
+      </a>
+
+      <a href="/blog/who-is-responsible-for-cleaning-draft-beer-lines.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Regulations</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>Who Is Responsible for Cleaning Your Draft Lines — You or Your Distributor?</h3>
+        <p>A lot of bar owners assume their distributor handles it. In Pennsylvania, that assumption can get your license flagged. Here's how it actually works.</p>
+        <span class="blog-card-link">Read More →</span>
+      </a>
+
+      <a href="/blog/what-happens-if-you-dont-clean-draft-beer-lines.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Line Cleaning</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>What Happens If You Don't Clean Your Draft Lines?</h3>
+        <p>Lost repeat business, off-flavors, PLCB violations. Here's the real cost of skipping your bi-weekly cleaning — and what builds up in the meantime.</p>
+        <span class="blog-card-link">Read More →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="sec-w cta-band divide">
+  <div class="wrap">
+    <p class="eyebrow" style="justify-content:center;margin-bottom:16px">Serving Philadelphia and the surrounding areas</p>
+    <h2><em>Ready to Schedule</em> a Cleaning?</h2>
+    <p class="cta-sub">Read enough? Call us directly — the fastest way to get a same-week visit on the books.</p>
+    <a href="tel:2672821002" class="cta-phone">(267) 282-1002</a>
+    <div class="cta-btns">
+      <a href="tel:2672821002" class="btn btn-gold btn-lg">Call for Service</a>
+      <a href="https://phillydraftcleaners.com/contact" class="btn btn-outline btn-lg">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="/assets/brand/logo.png" alt="Philly Draft Cleaners" height="60">
+        </div>
+        <p>Premium draft line cleaning for Philadelphia bars, restaurants, and breweries. Micro Matic certified.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Pages</h5>
+        <ul>
+          <li><a href="https://phillydraftcleaners.com/about">About</a></li>
+          <li><a href="https://phillydraftcleaners.com/services">Services</a></li>
+          <li><a href="https://phillydraftcleaners.com/faq">FAQ</a></li>
+          <li><a href="https://phillydraftcleaners.com/blog">Blog</a></li>
+          <li><a href="https://phillydraftcleaners.com/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="https://phillydraftcleaners.com/services">Bi-Weekly Line Cleaning</a></li>
+          <li><a href="https://phillydraftcleaners.com/services">Quarterly Acid Cleaning</a></li>
+          <li><a href="https://phillydraftcleaners.com/contact">Free On-Site Estimate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact">
+          <a href="tel:2672821002">(267) 282-1002</a><br>
+          <a href="mailto:mike@phillydraftcleaners.com">mike@phillydraftcleaners.com</a><br>
+          Philadelphia, PA
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Philly Draft Cleaners LLC. All rights reserved.</p>
+      <p>Serving Philadelphia and the surrounding areas</p>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>
