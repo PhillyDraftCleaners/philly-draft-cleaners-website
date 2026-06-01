@@ -25,14 +25,16 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <style>
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--g2);border:1px solid var(--g2);margin-top:48px}
-.blog-card{background:var(--white);padding:32px 28px;display:flex;flex-direction:column;gap:12px;transition:background .15s}
-.blog-card:hover{background:var(--g1)}
-.blog-card a{display:contents}
-.blog-date{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g3)}
-.blog-card h3{font-size:20px;color:var(--black);transition:color .15s;line-height:1.2}
-.blog-card:hover h3{color:var(--amber)}
-.blog-card p{font-size:14px;color:var(--g4);line-height:1.6;flex:1}
+a.blog-card{background:var(--white);padding:32px 28px;display:flex;flex-direction:column;gap:12px;transition:background .15s;text-decoration:none}
+a.blog-card:hover{background:var(--g1)}
+.blog-cat{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+.blog-date{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--g3)}
+.blog-card h3{font-size:19px;color:var(--black);transition:color .15s;line-height:1.25;margin:0}
+a.blog-card:hover h3{color:var(--amber)}
+.blog-card p{font-size:14px;color:var(--g4);line-height:1.6;flex:1;margin:0}
 .blog-card-link{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-top:auto}
+.blog-meta{display:flex;align-items:center;gap:8px}
+.blog-meta-dot{color:var(--g3);font-size:10px}
 @media(max-width:900px){.blog-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.blog-grid{grid-template-columns:1fr}}
 </style>
@@ -84,27 +86,108 @@
 <section class="sec-w divide">
   <div class="wrap">
     <p class="eyebrow">Latest posts</p>
-    <h2>Recent Articles</h2>
-    <!-- ADD NEW POSTS HERE: copy a .blog-card div and update the date, title, excerpt, and href -->
+    <h2>All Articles</h2>
     <div class="blog-grid">
-      <div class="blog-card">
-        <span class="blog-date">Coming Soon</span>
-        <h3>Why Your Bar Needs Recirculating Pump Cleaning</h3>
-        <p>Most bars are still using static soak cleaning. Here's what that means for your beer quality — and what the upgrade looks like.</p>
+
+      <a href="/blog/why-is-my-draft-beer-flat.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Beer Quality</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>Why Is My Draft Beer Flat?</h3>
+        <p>Flat beer is a solvable problem. Here's how to work through the most common causes — from CO₂ pressure to dirty lines — and fix it fast.</p>
         <span class="blog-card-link">Read More →</span>
-      </div>
-      <div class="blog-card">
-        <span class="blog-date">Coming Soon</span>
-        <h3>What Is Beer Stone and Why Should You Care?</h3>
-        <p>Beer stone is calcium oxalate buildup that standard cleaning can't remove. Here's what it does to your lines and how to get rid of it.</p>
+      </a>
+
+      <a href="/blog/why-draft-beer-lines-need-cleaning-every-two-weeks.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Line Cleaning</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>Why Do Draft Beer Lines Need to Be Cleaned Every 2 Weeks?</h3>
+        <p>It's not arbitrary. Yeast, bacteria, and mold build up fast. Here's what the Brewers Association says — and what Pennsylvania law requires.</p>
         <span class="blog-card-link">Read More →</span>
-      </div>
-      <div class="blog-card">
-        <span class="blog-date">Coming Soon</span>
-        <h3>Foamy Pours: A Troubleshooting Guide for Bar Owners</h3>
-        <p>Foam isn't always a dirty line problem. Here's how to diagnose the actual cause — temperature, pressure, CO₂, or lines — before you call anyone.</p>
+      </a>
+
+      <a href="/blog/alkaline-vs-acid-draft-beer-line-cleaning.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Line Cleaning</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>Alkaline vs. Acid Line Cleaning: What's the Difference?</h3>
+        <p>Your bi-weekly caustic clean handles bacteria. But it does nothing for beer stone. Here's why both cleaners are necessary and what each one does.</p>
         <span class="blog-card-link">Read More →</span>
-      </div>
+      </a>
+
+      <a href="/blog/off-taste-in-draft-beer.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Beer Quality</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>What's That Off-Taste in My Draft Beer?</h3>
+        <p>Butterscotch, vinegar, metal — each off-flavor has a cause. Most of them trace back to the same place: your draft lines.</p>
+        <span class="blog-card-link">Read More →</span>
+      </a>
+
+      <a href="/blog/pennsylvania-draft-beer-line-cleaning-law.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Regulations</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>Pennsylvania Draft Beer Line Cleaning Law: What Every Bar Owner Needs to Know</h3>
+        <p>Pennsylvania law requires cleaning every 14 days. Here's exactly what 40 Pa. Code § 5.51 says, who enforces it, and what happens if you don't comply.</p>
+        <span class="blog-card-link">Read More →</span>
+      </a>
+
+      <a href="/blog/what-is-beer-stone-draft-lines.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Line Cleaning</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>What Is Beer Stone and Why Does It Ruin Your Draft Lines?</h3>
+        <p>Beer stone is calcium oxalate — a mineral deposit that builds up inside your lines and can't be removed with a standard caustic clean.</p>
+        <span class="blog-card-link">Read More →</span>
+      </a>
+
+      <a href="/blog/biofilm-in-draft-beer-lines.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Beer Quality</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>The Science of Biofilm in Draft Beer Lines</h3>
+        <p>A 2021 NIH study found over 100 bacterial species in retail draft lines. Here's what biofilm is, how it forms, and why it matters for your pour.</p>
+        <span class="blog-card-link">Read More →</span>
+      </a>
+
+      <a href="/blog/who-is-responsible-for-cleaning-draft-beer-lines.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Regulations</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>Who Is Responsible for Cleaning Your Draft Lines — You or Your Distributor?</h3>
+        <p>A lot of bar owners assume their distributor handles it. In Pennsylvania, that assumption can get your license flagged. Here's how it actually works.</p>
+        <span class="blog-card-link">Read More →</span>
+      </a>
+
+      <a href="/blog/what-happens-if-you-dont-clean-draft-beer-lines.html" class="blog-card">
+        <div class="blog-meta">
+          <span class="blog-cat">Line Cleaning</span>
+          <span class="blog-meta-dot">·</span>
+          <span class="blog-date">June 1, 2026</span>
+        </div>
+        <h3>What Happens If You Don't Clean Your Draft Lines?</h3>
+        <p>Lost repeat business, off-flavors, PLCB violations. Here's the real cost of skipping your bi-weekly cleaning — and what builds up in the meantime.</p>
+        <span class="blog-card-link">Read More →</span>
+      </a>
+
     </div>
   </div>
 </section>
