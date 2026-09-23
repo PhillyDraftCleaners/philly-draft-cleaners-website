@@ -27,7 +27,7 @@
   /* --- ACTIVE NAV LINK ------------------------------------ */
   var path = window.location.pathname.replace(/\/$/, '') || '/';
   document.querySelectorAll('.nav-links a, .nav-mob a').forEach(function (a) {
-    var href = (a.getAttribute('href') || '').replace(/\/$/, '');
+    var href = (a.pathname || '').replace(/\/$/, '') || '/';
     if (href === path) a.classList.add('active');
   });
 

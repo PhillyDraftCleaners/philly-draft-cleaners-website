@@ -1,46 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://phillydraftcleaners.com/</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-09-22</lastmod>
   </url>
-
   <url>
-    <loc>https://phillydraftcleaners.com/about</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://phillydraftcleaners.com/services/</loc>
+    <lastmod>2026-09-22</lastmod>
   </url>
-
   <url>
-    <loc>https://phillydraftcleaners.com/services</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://phillydraftcleaners.com/about/</loc>
+    <lastmod>2026-09-22</lastmod>
   </url>
-
   <url>
-    <loc>https://phillydraftcleaners.com/faq</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://phillydraftcleaners.com/faq/</loc>
+    <lastmod>2026-09-22</lastmod>
   </url>
-
   <url>
-    <loc>https://phillydraftcleaners.com/contact</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://phillydraftcleaners.com/contact/</loc>
+    <lastmod>2026-09-22</lastmod>
   </url>
-
   <url>
-    <loc>https://phillydraftcleaners.com/blog</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://phillydraftcleaners.com/blog/</loc>
+    <lastmod>2026-09-22</lastmod>
   </url>
-
+  <url>
+    <loc>https://phillydraftcleaners.com/blog/pennsylvania-draft-beer-line-cleaning-law</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://phillydraftcleaners.com/blog/who-is-responsible-for-cleaning-draft-beer-lines</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://phillydraftcleaners.com/blog/why-draft-beer-lines-need-cleaning-every-two-weeks</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://phillydraftcleaners.com/blog/what-happens-if-you-dont-clean-draft-beer-lines</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://phillydraftcleaners.com/blog/biofilm-in-draft-beer-lines</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://phillydraftcleaners.com/blog/what-is-beer-stone-draft-lines</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://phillydraftcleaners.com/blog/alkaline-vs-acid-draft-beer-line-cleaning</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://phillydraftcleaners.com/blog/off-taste-in-draft-beer</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://phillydraftcleaners.com/blog/why-is-my-draft-beer-flat</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://phillydraftcleaners.com/blog/why-is-my-draft-beer-foamy</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://phillydraftcleaners.com/blog/pennsylvania-draft-line-cleaning-records</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://phillydraftcleaners.com/blog/when-to-replace-draft-beer-lines</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://phillydraftcleaners.com/blog/how-to-choose-a-draft-line-cleaning-service</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
 </urlset>
