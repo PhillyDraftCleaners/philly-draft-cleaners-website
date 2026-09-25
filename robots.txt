@@ -40,6 +40,40 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+
 User-agent: ChatGPT-User
 Allow: /
 
@@ -91,9 +125,6 @@ User-agent: ZoominfoBot
 Disallow: /
 
 User-agent: Bytespider
-Disallow: /
-
-User-agent: Amazonbot
 Disallow: /
 
 # Ad intelligence / email harvesting bots
@@ -195,9 +226,11 @@ Disallow: /
 # -------------------------------------------------------
 User-agent: *
 Allow: /
-Crawl-delay: 10
 
 # -------------------------------------------------------
 # Sitemap
 # -------------------------------------------------------
 Sitemap: https://phillydraftcleaners.com/sitemap.xml
+
+# Plain-language site summary for AI assistants
+# https://phillydraftcleaners.com/llms.txt
