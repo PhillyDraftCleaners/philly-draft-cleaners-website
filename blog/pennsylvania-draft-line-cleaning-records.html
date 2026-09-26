@@ -62,7 +62,14 @@
       "inLanguage": "en-US",
       "isAccessibleForFree": true,
       "about": {
-        "@id": "https://phillydraftcleaners.com/services/#service"
+        "@id": "https://phillydraftcleaners.com/services/#service",
+        "areaServed": {
+          "@id": "https://phillydraftcleaners.com/#philadelphia"
+        },
+        "audience": {
+          "@type": "BusinessAudience",
+          "audienceType": "Bars, restaurants and venues with draft beer systems"
+        }
       },
       "audience": {
         "@type": "BusinessAudience",
@@ -70,7 +77,12 @@
       },
       "contentLocation": {
         "@type": "City",
-        "name": "Philadelphia"
+        "@id": "https://phillydraftcleaners.com/#philadelphia",
+        "name": "Philadelphia",
+        "sameAs": [
+          "https://en.wikipedia.org/wiki/Philadelphia",
+          "https://www.wikidata.org/wiki/Q1345"
+        ]
       },
       "speakable": {
         "@type": "SpeakableSpecification",
@@ -197,57 +209,83 @@
       "areaServed": [
         {
           "@type": "City",
+          "@id": "https://phillydraftcleaners.com/#philadelphia",
           "name": "Philadelphia",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Philadelphia",
+            "https://www.wikidata.org/wiki/Q1345"
+          ],
           "containedInPlace": {
             "@type": "State",
-            "name": "Pennsylvania"
+            "name": "Pennsylvania",
+            "sameAs": [
+              "https://en.wikipedia.org/wiki/Pennsylvania",
+              "https://www.wikidata.org/wiki/Q1400"
+            ]
           }
         },
         {
           "@type": "Neighborhood",
           "name": "Center City",
           "containedInPlace": {
-            "@type": "City",
-            "name": "Philadelphia"
-          }
+            "@id": "https://phillydraftcleaners.com/#philadelphia"
+          },
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Center_City,_Philadelphia"
+          ]
         },
         {
           "@type": "Neighborhood",
           "name": "Fishtown",
           "containedInPlace": {
-            "@type": "City",
-            "name": "Philadelphia"
-          }
+            "@id": "https://phillydraftcleaners.com/#philadelphia"
+          },
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Fishtown,_Philadelphia"
+          ]
         },
         {
           "@type": "Neighborhood",
           "name": "Northern Liberties",
           "containedInPlace": {
-            "@type": "City",
-            "name": "Philadelphia"
-          }
+            "@id": "https://phillydraftcleaners.com/#philadelphia"
+          },
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Northern_Liberties,_Philadelphia"
+          ]
         },
         {
           "@type": "Neighborhood",
           "name": "South Philly",
           "containedInPlace": {
-            "@type": "City",
-            "name": "Philadelphia"
-          }
+            "@id": "https://phillydraftcleaners.com/#philadelphia"
+          },
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/South_Philadelphia"
+          ]
         },
         {
           "@type": "Neighborhood",
           "name": "Old City",
           "containedInPlace": {
-            "@type": "City",
-            "name": "Philadelphia"
-          }
+            "@id": "https://phillydraftcleaners.com/#philadelphia"
+          },
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Old_City,_Philadelphia"
+          ]
         }
       ],
       "founder": {
         "@id": "https://phillydraftcleaners.com/#mike"
       },
       "knowsAbout": [
+        {
+          "@type": "Thing",
+          "name": "Draught beer",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Draught_beer"
+          ]
+        },
         "Draft beer line cleaning",
         "Draught beer quality",
         "Beer line maintenance",
@@ -298,7 +336,13 @@
         "https://www.instagram.com/phillydraftcleaners",
         "https://www.tiktok.com/@phillydraftcleaners"
       ],
-      "hasMap": "https://share.google/dw30Roc1Tug4uSQWh"
+      "hasMap": "https://share.google/dw30Roc1Tug4uSQWh",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Philadelphia",
+        "addressRegion": "PA",
+        "addressCountry": "US"
+      }
     },
     {
       "@type": "Person",
@@ -333,7 +377,7 @@
           "name": "Micro Matic Dispense Institute",
           "url": "https://www.micromatic.com/"
         },
-        "image": "https://phillydraftcleaners.com/assets/images/Philly%20Draft%20Cleaners%20Micro%20Matic%20Certification.webp"
+        "image": "https://phillydraftcleaners.com/assets/images/philly-draft-cleaners-micro-matic-certification.webp"
       }
     },
     {
@@ -347,54 +391,77 @@
       "areaServed": [
         {
           "@type": "City",
+          "@id": "https://phillydraftcleaners.com/#philadelphia",
           "name": "Philadelphia",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Philadelphia",
+            "https://www.wikidata.org/wiki/Q1345"
+          ],
           "containedInPlace": {
             "@type": "State",
-            "name": "Pennsylvania"
+            "name": "Pennsylvania",
+            "sameAs": [
+              "https://en.wikipedia.org/wiki/Pennsylvania",
+              "https://www.wikidata.org/wiki/Q1400"
+            ]
           }
         },
         {
           "@type": "Neighborhood",
           "name": "Center City",
           "containedInPlace": {
-            "@type": "City",
-            "name": "Philadelphia"
-          }
+            "@id": "https://phillydraftcleaners.com/#philadelphia"
+          },
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Center_City,_Philadelphia"
+          ]
         },
         {
           "@type": "Neighborhood",
           "name": "Fishtown",
           "containedInPlace": {
-            "@type": "City",
-            "name": "Philadelphia"
-          }
+            "@id": "https://phillydraftcleaners.com/#philadelphia"
+          },
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Fishtown,_Philadelphia"
+          ]
         },
         {
           "@type": "Neighborhood",
           "name": "Northern Liberties",
           "containedInPlace": {
-            "@type": "City",
-            "name": "Philadelphia"
-          }
+            "@id": "https://phillydraftcleaners.com/#philadelphia"
+          },
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Northern_Liberties,_Philadelphia"
+          ]
         },
         {
           "@type": "Neighborhood",
           "name": "South Philly",
           "containedInPlace": {
-            "@type": "City",
-            "name": "Philadelphia"
-          }
+            "@id": "https://phillydraftcleaners.com/#philadelphia"
+          },
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/South_Philadelphia"
+          ]
         },
         {
           "@type": "Neighborhood",
           "name": "Old City",
           "containedInPlace": {
-            "@type": "City",
-            "name": "Philadelphia"
-          }
+            "@id": "https://phillydraftcleaners.com/#philadelphia"
+          },
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Old_City,_Philadelphia"
+          ]
         }
       ],
-      "url": "https://phillydraftcleaners.com/services/"
+      "url": "https://phillydraftcleaners.com/services/",
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Bars, restaurants and venues with draft beer systems"
+      }
     }
   ]
 }
@@ -402,11 +469,9 @@
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M5CSSZMM');</script>
 <!-- End Google Tag Manager -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css">
-<link rel="stylesheet" href="/assets/css/home.css">
+<link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/style.css?v=3">
+<link rel="stylesheet" href="/assets/css/home.css?v=3">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -432,7 +497,7 @@
 <nav class="site-nav" id="site-nav">
   <div class="nav-inner">
     <a href="https://phillydraftcleaners.com/" class="nav-logo" aria-label="Philly Draft Cleaners Home">
-      <img src="/assets/brand/logo.png" alt="Philly Draft Cleaners" height="90">
+      <img src="/assets/brand/logo-nav.webp" alt="Philly Draft Cleaners" width="135" height="90">
     </a>
     <div class="nav-links">
       <a href="https://phillydraftcleaners.com/about/">About</a>
@@ -545,7 +610,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo">
-          <img src="/assets/brand/logo.png" alt="Philly Draft Cleaners" height="60">
+          <img src="/assets/brand/logo-nav.webp" alt="Philly Draft Cleaners" width="90" height="60">
         </div>
         <p>Premium draft line cleaning for Philadelphia bars, restaurants, and breweries. Micro Matic certified.</p>
       </div>
